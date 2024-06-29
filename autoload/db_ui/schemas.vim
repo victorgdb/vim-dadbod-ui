@@ -164,12 +164,12 @@ endif
 
 let s:bigquery_schemas_query = printf("
       \ SELECT schema_name FROM `%s`.INFORMATION_SCHEMA.SCHEMATA
-      \ ", g:db_adapter_bigquery_region)
+      \ ", g:db_adapter_bigquery_dataset)
 
 let s:bigquery_schema_tables_query = printf("
       \ SELECT table_schema, table_name
       \ FROM `%s`.INFORMATION_SCHEMA.TABLES
-      \ ", g:db_adapter_bigquery_region)
+      \ ", g:db_adapter_bigquery_dataset)
 
 let s:bigquery = {
       \ 'callable': 'filter',
